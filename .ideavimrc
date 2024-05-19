@@ -1,0 +1,77 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+" map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+
+""  ********************************************************* Custom config *********************************************************
+let mapleader = " "
+
+" reload ideavimrc
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+inoremap jj <esc>
+
+" map enter to G
+:nnoremap <CR> G
+" IDE actions
+nmap ]] <Action>(NextTab)
+nmap [[ <Action>(PreviousTab)
+nmap <leader>t <Action>(ActivateTerminalToolWindow)
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+nmap gD <Action>(GotoTypeDeclaration)
+nmap gh <Action>(ShowHoverInfo)
+nmap gl <Action>(QuickImplementations)
+nmap gy <Action>(ShowErrorDescription)
+nmap cl <Action>(CommentByLineComment)
+xmap cl <Action>(CommentByLineComment)
+nmap cb <Action>(CommentByBlockComment)
+xmap cb <Action>(CommentByBlockComment)
+nmap <leader>h <Action>(HighlightUsagesInFile)
+nmap <leader>p <Action>(ActivateProjectToolWindow)
+nmap <leader>s <Action>(ShowUsages)
+nmap <leader>u <Action>(FindUsages)
+nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
+xmap <leader>r <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>c <Action>(CheckinProject)
+map <leader>rn <Action>(RenameElement)
+nmap <C-j> <Action>(MoveLineDown)
+xmap <C-j> <Action>(MoveLineDown)
+nmap <C-k> <Action>(MoveLineUp)
+xmap <C-k> <Action>(MoveLineUp)
