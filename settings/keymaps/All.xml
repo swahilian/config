@@ -1,0 +1,12 @@
+<keymap version="1" name="All" parent="$default">
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="alt f12" />
+    <keyboard-shortcut first-keystroke="alt t" />
+  </action>
+  <action id="FindUsages">
+    <keyboard-shortcut first-keystroke="alt f7" />
+    <keyboard-shortcut first-keystroke="ctrl u" />
+  </action>
+  <action id="GotoSuperMethod" />
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.InsertImageAction" />
+</keymap>
